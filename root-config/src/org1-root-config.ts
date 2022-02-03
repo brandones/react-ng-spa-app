@@ -6,12 +6,6 @@ registerApplication({
   activeWhen: ["/react"],
 });
 
-registerApplication({
-  name: "angular-app",
-  app: () => System.import("angular-app"),
-  activeWhen: ["/angular"],
-});
-
 start({
   urlRerouteOnly: true,
 });

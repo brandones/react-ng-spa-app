@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Single SPA React Angular</title>
+  <title>Single SPA React</title>
   <!--
     Remove this if you only support browsers that support async/await.
     This is needed by babel to share largeish helper code for compiling async/await in older
@@ -50,18 +50,11 @@
     {
       "imports": {
         "@org1/root-config": "//localhost:9000/org1-root-config.js",
-         "@org1/react-app": "//localhost:8080/org1-react-app.js",
-         "angular-app": "//localhost:4200/main.js"
+         "@org1/react-app": "//localhost:8080/org1-react-app.js"
       }
     }
   </script>
   <% } %>
-
-  <!--
-    If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
-    Learn more about why at https://single-spa.js.org/docs/ecosystem-angular/#zonejs
-  -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script> -->
 
   <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
   <% if (isLocal) { %>
@@ -115,11 +108,6 @@
       <a onclick="singleSpaNavigate('/react')">
         <li>
           React
-        </li>
-      </a>
-      <a onclick="singleSpaNavigate('/angular')">
-        <li>
-          Angular
         </li>
       </a>
     </ul>
